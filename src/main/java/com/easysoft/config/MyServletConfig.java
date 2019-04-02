@@ -23,7 +23,7 @@ public class MyServletConfig extends WebMvcConfigurerAdapter {
     }
 
     /**
-     * 开启静态资源访问，v0.5--合并分支
+     * 开启静态资源访问，master update v0.8
      * @param configurer
      */
     @Override
