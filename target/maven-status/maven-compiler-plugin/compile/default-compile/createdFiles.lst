@@ -1,5 +1,0 @@
-com\easysoft\config\MyServletConfig.class
-com\easysoft\controller\OrderController.class
-com\easysoft\service\OrderService.class
-com\easysoft\config\MyRootConfig.class
-com\easysoft\initializer\MyWebApplicationInitializer.class

@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 public class MyServletConfig extends WebMvcConfigurerAdapter {
     /**
-     * 定制视图解析器
+     * 定制视图解析器，注意：/结尾
      * @param registry
      */
     @Override
