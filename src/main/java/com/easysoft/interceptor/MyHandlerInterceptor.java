@@ -8,15 +8,15 @@ import javax.servlet.http.HttpServletResponse;
 
 public class MyHandlerInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("===MyHandlerInterceptor-->preHandle...===");
+        System.out.println(Thread.currentThread() + "===MyHandlerInterceptor-->preHandle...===");
         return true;
     }
 
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("===MyHandlerInterceptor-->postHandle...===");
+        System.out.println(Thread.currentThread() + "===MyHandlerInterceptor-->postHandle...===");
     }
 
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("===MyHandlerInterceptor-->afterCompletion...===");
+        System.out.println(Thread.currentThread() + "===MyHandlerInterceptor-->afterCompletion...===");
     }
 }
