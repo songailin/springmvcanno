@@ -20,7 +20,6 @@ public class AsyncOrderController {
     @RequestMapping("/add")
     public DeferredResult<Object> add() {
         DeferredResult<Object> deferredResult = new DeferredResult<Object>((long) 5000, "add fail.");
-        deferredResult.setResult(UUID.randomUUID().toString());
         queueService.add(deferredResult);
         return deferredResult;
     }
@@ -29,6 +28,7 @@ public class AsyncOrderController {
     @RequestMapping("/poll")
     public String poll() {
         DeferredResult<Object> deferredResult = queueService.poll();
+        deferredResult.setResult(UUID.randomUUID().toString());
         return (String) deferredResult.getResult();
     }
 
